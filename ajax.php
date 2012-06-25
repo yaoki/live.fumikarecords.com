@@ -17,6 +17,33 @@
 <!--スマートフォン用viewport指定-->
 <meta name="viewport" content="width=device-width">
 
+<!-- ajax のテスト-->
+<script>
+	<!--
+	var xmlHttp;
+
+	function loadtext(){
+		if(window.XMLHttpRequest){
+		xmlHttp = new XMLHttpRequest();
+		}else{
+			if(window.ActiveXObject){
+			xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}else{
+			xmlHttp = null;
+			}
+		}
+	xmlHttp.onreadystatechange = checkStatus();
+	xmlHttp.open("GET","index.html",true);
+	xmlHttp.send(null);
+	}
+	function checkStatus(){
+		if( xmlHttp.readystate == 4 && xmlHttp.status ==200 ){
+			var node = document.getElementById('display');
+			node.innerHTML = xmlHttp.responsetext;
+		}
+	}
+	-->
+</script>
   <!--↓↓Google Analytics 用トラッキングコード↓↓-->
   <script type="text/javascript">
 
@@ -49,10 +76,10 @@
 以下出演順は不明です。
 <br>
 <a href="http://www.antiknock.net/schedule/schedule.html">下記出演者のソース</a>
-<br>
-<a href="edit-antiknock.php">edit?</a>
 </p>
-<div id="2012-03-21-antiknock">
+<div id="display">
+</div>
+<div id="2012-03-21-antiknock" onclick="loadtext()">
 <h3>2012/03/21</h3>
 <p>ひとこと：全部スクリーモの要素が入ってるようだ。あと、 audioleaf 利用率がけっこう高い。</p>
 <dl>
